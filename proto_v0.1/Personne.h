@@ -6,12 +6,14 @@
 
 class Personne {
 public:
-    Personne(std::string name, std::string firstname);
+    Personne(std::string name, std::string firstname, int money);
 
     const std::string& getFirstname() const;
     void setFirstname(std::string firstname);
     const std::string& getName() const;
     void setName(std::string name);
+    const int& getMoney() const;
+    void setMoney(int money);
 
     virtual ~Personne();
 
@@ -21,6 +23,7 @@ private:
 private:
     std::string name;
     std::string firstname;
+    int money;
 };
 
 std::ostream & operator<<(std::ostream &os, const Personne& p);
