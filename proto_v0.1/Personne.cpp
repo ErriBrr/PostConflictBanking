@@ -12,7 +12,7 @@ const std::string& Personne::getName() const {
     return name;
 }
 
-const int& Personne::getMoney() const {
+int Personne::getMoney() const {
     return money;
 }
 

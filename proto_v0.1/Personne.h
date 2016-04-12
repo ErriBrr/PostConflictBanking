@@ -12,7 +12,7 @@ public:
     void setFirstname(std::string firstname);
     const std::string& getName() const;
     void setName(std::string name);
-    const int& getMoney() const;
+    int getMoney() const;
     void setMoney(int money);
 
     virtual ~Personne();
