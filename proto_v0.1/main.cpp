@@ -9,21 +9,21 @@ using namespace std;
 
 int main(int argc, char** argv) {
     list<Personne*> personnes;
-    ajoutnouveau(personnes, "Michel", "Michel", 2000);
-    ajoutnouveau(personnes, "Jean", "Jean", 2000);
-    ajoutnouveau(personnes, "Gino", "Gino", 2000);
-    ajoutnouveau(personnes, "Tito", "Toti", 2000);
+    ajoutnouveau(personnes, "DO", "Do", 2000);
+    ajoutnouveau(personnes, "RE", "Re", 2000);
+    ajoutnouveau(personnes, "MI", "Mi", 2000);
+    ajoutnouveau(personnes, "FA", "Fa", 2000);
 
     afficherListe(personnes);
     std::cout << "--------------------------" << std::endl;
-    Personne* debitor = trouver(personnes, "Tito", "Toti");
-    Personne* creditor = trouver(personnes, "Gino", "Gino");
+    Personne* debitor = trouver(personnes, "DO", "Do");
+    Personne* creditor = trouver(personnes, "FA", "Fa");
     if (debitor != NULL && creditor != NULL) {
         transaction(*debitor, *creditor, 500);
     }
 
     afficherListe(personnes);
-    supprimUnNom(personnes, "Gino", "Gino");
+    supprimUnNom(personnes, "RE", "Re");
     std::cout << "--------------------------" << std::endl;
     afficherListe(personnes);
 
